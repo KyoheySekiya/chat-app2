@@ -20,7 +20,7 @@
           <option value="">チャットするユーザーを選択してください</option>
             <% User.all.where.not(id: current_user.id).each do |user| %>
               <option value=<%=user.id%>><%= user.name %></option>
-          <% end %>
+            <% end %>
         </select>
         <input name="room[user_ids][]" type="hidden" value=<%=current_user.id%>>
       </div>
